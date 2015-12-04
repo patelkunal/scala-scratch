@@ -2,6 +2,7 @@ object Main {
 	
 	def main(args: Array[String]) {
 		// args.foreach(println)
+		val x = 7 // may ommit Type for var/val
 		val n: Int = 7
 		greet();
 		println(square(n))

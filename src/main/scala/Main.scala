@@ -10,6 +10,15 @@ object Main {
 		println(squareWithBlock(n))
 		println(squareWithBlockAndReturnType(n))
 		println(squareWithBlockAndReturnTypeAndReturnStmt(n))
+
+
+		val kppatel = new Student("kppatel", "05-JUNE-1989")
+		println(kppatel.toString)
+		
+		var nirali = new Student("nkpatel", "18-SEPT-1988")
+		println(nirali.toString)
+		// nirali.dob = "18-sept-1988" // this should fail because Student.dob is immutable
+		println(nirali.toString)
 	}
 
 	def greet(): Unit = println("hello, world !!")
@@ -26,6 +35,11 @@ object Main {
 	
 	def squareWithBlockAndReturnTypeAndReturnStmt(a: Int): Int = {
 		return a * a
+	}
+
+	class Student(val name:String, val dob:String) {
+		override
+		def toString() = java.lang.String.format("%s, %s", name, dob)
 	}
 }
 

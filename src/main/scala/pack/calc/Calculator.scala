@@ -19,16 +19,4 @@ object Calculator {
 		return sumIntListHelper(intList, BigInt(0))
 	}
 
-	def main(args: Array[String]): Unit = {
-		// val intList = 1.to(10000).toList;
-		// println(sumIntListBad(intList))
-		val intList = 1.to(10000000).toList
-		// println(intList)
-		println(sumIntListGood(intList))
-	}
-
-	def getRangeList(start: Int, end: Int): List[Int] = {
-		return Range.inclusive(start, end).toList
-	}
-
 }

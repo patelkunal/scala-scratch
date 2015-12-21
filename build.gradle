@@ -23,3 +23,10 @@ task run(type: JavaExec, dependsOn: classes) {
 	classpath sourceSets.main.runtimeClasspath
 	classpath configurations.runtime
 }
+
+test {
+    testLogging {
+        // Show that tests are run in the command-line output
+        events 'started', 'passed'
+    }
+}
